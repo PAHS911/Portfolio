@@ -66,9 +66,12 @@ const NavBar = () => {
           scrollY > 0
             ? "bg-white dark:bg-black dark:bg-opacity-90 bg-opacity-90"
             : ""
-        } max-ml:border-b max-ml:border-gray-200 dark:max-ml:border-gray-700 fixed top-0 left-0 right-0 z-10`}>
+        } max-ml:border-b max-ml:border-gray-200 dark:max-ml:border-gray-700 fixed top-0 left-0 right-0 z-10`}
+      >
         <div className="flex justify-between">
-          <h1 className="text-2xl font-bold dark:text-white">PORTFOLIO</h1>
+          <h1 className="text-2xl font-bold dark:text-white">
+            Pir Amir Hamza Shah
+          </h1>
         </div>
 
         {menu ? (
@@ -151,6 +154,11 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
+          <div className="text-center">
+            <button className="text-center dark:bg-white dark:text-black bg-black text-white px-2 rounded-full  transition-colors duration-200 hover:bg-gray-600 active:bg-gray-800">
+              Download CV
+            </button>
+          </div>{" "}
           <div className=" text-center dark:text-white  hover:shadow-black ">
             <IoSunnyOutline
               onClick={toggleLightMode}
@@ -166,11 +174,6 @@ const NavBar = () => {
               }`}
               title="Dark mode"
             />
-          </div>
-          <div className="text-center">
-            <button className="text-center dark:bg-white dark:text-black bg-black text-white px-2 rounded-full  transition-colors duration-200 hover:bg-gray-600 active:bg-gray-800">
-              Download CV
-            </button>
           </div>
         </div>
       </section>

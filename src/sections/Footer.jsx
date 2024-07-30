@@ -16,7 +16,7 @@ const Footer = () => {
     setShowTooltipEmail(true);
     setTimeout(() => {
       setShowTooltipEmail(false);
-    }, 2000); 
+    }, 2000);
   };
 
   const copyToClipboardPhone = (text) => {
@@ -25,7 +25,7 @@ const Footer = () => {
     setShowTooltipPhone(true);
     setTimeout(() => {
       setShowTooltipPhone(false);
-    }, 2000); 
+    }, 2000);
   };
   return (
     <section id="contact">
@@ -44,17 +44,22 @@ const Footer = () => {
             csgo560@gmail.com{" "}
           </p>
           <div className="relative">
-          <FaRegCopy
-            onClick={() => copyToClipboardEmail("csgo560@gmail.com")}
-            className="dark:text-gray-300 text-3xl max-ml:text-xl cursor-pointer hover:text-black dark:hover:text-white"
-          />
-        { showTooltipEmail && (<span className="absolute bottom-9 left-1/2 -translate-x-1/2 bg-gray-200 text-gray-500 px-2 py-1 rounded-3xl text-sm dark:text-gray-300 dark:bg-gray-500">Copied</span>)}
+            <FaRegCopy
+              onClick={() => copyToClipboardEmail("csgo560@gmail.com")}
+              className="dark:text-gray-300 text-3xl max-ml:text-xl cursor-pointer hover:text-black dark:hover:text-white"
+            />
+            {showTooltipEmail && (
+              <span className="absolute bottom-9 left-1/2 -translate-x-1/2 bg-gray-200 text-gray-500 px-2 py-1 rounded-3xl text-sm dark:text-gray-300 dark:bg-gray-500">
+                Copied
+              </span>
+            )}
           </div>
         </p>
 
         <p
           className=" mt-3 text-gray-500
-         flex justify-center items-center gap-4 ">
+         flex justify-center items-center gap-4 "
+        >
           <span>
             <IoCallOutline className="text-3xl max-ml:text-xl cursor-pointer hover:text-black dark:text-gray-300 dark:hover:text-white" />
           </span>
@@ -68,7 +73,11 @@ const Footer = () => {
                 className="text-3xl max-ml:text-xl  cursor-pointer hover:text-black dark:text-gray-300  dark:hover:text-white"
               />
             </span>
-            {showTooltipPhone && (<span className="absolute bottom-9 left-1/2 -translate-x-1/2  mt-2 bg-gray-200 text-gray-500 px-2 py-1 rounded-3xl text-sm dark:text-gray-300 dark:bg-gray-500">Copied</span>)}
+            {showTooltipPhone && (
+              <span className="absolute bottom-9 left-1/2 -translate-x-1/2  mt-2 bg-gray-200 text-gray-500 px-2 py-1 rounded-3xl text-sm dark:text-gray-300 dark:bg-gray-500">
+                Copied
+              </span>
+            )}
           </div>
         </p>
 
@@ -86,27 +95,6 @@ const Footer = () => {
             <FaFigma className="hover:text-black dark:text-gray-300  dark:hover:text-white" />
           </a>
         </div>
-      </div>
-
-      <div className="p-4 w-full relative top-0 bg-slate-100 text-gray-500 dark:bg-gray-900 dark:text-gray-300">
-        <p className="flex justify-center items-center  ">
-          <FaRegCopyright className="mr-1" />
-          <span className="mr-3 pr-2 max-sm:mr-1 max-sm:pr-1  border-r-2 border-gray-300  ">
-            2024
-          </span>
-          <span className="underline underline-offset-4 pr-2 cursor-pointer max-sm:pr-1 hover:text-gray-900 active:text-gray-600">
-            <a href="https://www.figma.com/login" target="_blank">
-              Designed
-            </a>
-          </span>{" "}
-          and{" "}
-          <span className="underline underline-offset-4 pr-2 pl-2 cursor-pointer max-sm:pr-1 max-sm:pl-1 hover:text-gray-900 active:text-gray-600">
-            <a href="https://github.com/PAHS911/" target="_blank">
-              coded
-            </a>
-          </span>{" "}
-          by PAHS
-        </p>
       </div>
     </section>
   );
